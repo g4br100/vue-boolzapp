@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(228, 228, 215);
+}
+
+header{
+    background-color: rgb(3, 179, 126);
+    padding: 40px 0;
+}
+
+#container{
+    margin: 0 20%;
+}
+
+#upbar{
+    display: flex;
+    justify-content: space-between;
+}
+
+#user, #contactchat{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: rgb(198, 198, 198);
+    align-items: center;
+}
+
+#user, #notice, #lst{
+    width: 40%;
+}
+
+#contactchat, #chat{
+    width: 60%;
+}
+
+#chat, #lst{
+    height: 600px;
+    background-color: antiquewhite;
+}
+
+#upbar i{
+    padding: 0 5px;
+}
+
+
+#notice{
+    display: flex;
+    align-items: center;
+    background-color: rgb(0, 217, 255);
+    padding-left: 10px;
+    height: 60px;
+}
+
+#circle {
+    border-radius: 50%;
+    border: 2px solid white;
+    background-color: white;
+    color: rgb(0, 217, 255);
+    font-size: 20px;
+    width: 10%;
+    height: 35px;
+    padding-top: 5px;
+    margin-right: 12px;
+    text-align: center;
+}
+
+#circleuser{
+    border-radius: 50%;
+    border: 2px solid white;
+    background-color: white;
+    font-size: 20px;
+    width: 40px;
+    height: 35px;
+    padding-top: 5px;
+    margin-right: 12px;
+}
+
+
+#contactchat div:first-of-type, #user div:first-of-type{
+    display: flex;
+    align-items: center;
+}
+
+
+#namec{
+    width: 400px;
+}
+
+#col{
+    display: flex;
+}
+
+
