@@ -58,32 +58,14 @@
                             </div>
                         </div>
                         <ul>
-                            <li>
+                            <li v-for="item in contacts">
                                 <div>
-                                    <div class="circleuser grey"></div>
                                     <div>
-                                        <h4>Michele</h4>
-                                        <p>Ultimo messaggio inviato</p>
+                                        <img class="circleuser" :src="item.image" alt="User Image" >
                                     </div>
-                                </div>
-                                <span>12:30</span>
-                            </li>
-                            <li>
-                                <div>
-                                    <div class="circleuser grey"></div>
                                     <div>
-                                        <h4>Michele</h4>
-                                        <p>Ultimo messaggio inviato</p>
-                                    </div>
-                                </div>
-                                <span>12:30</span>
-                            </li>
-                            <li>
-                                <div>
-                                    <div class="circleuser grey"></div>
-                                    <div>
-                                        <h4>Michele</h4>
-                                        <p>Ultimo messaggio inviato</p>
+                                        <h4>{{item.title}}</h4>
+                                        <p>{{item.text}}</p>
                                     </div>
                                 </div>
                                 <span>12:30</span>
@@ -103,5 +85,7 @@
                 </div>
         </div>
     </main>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
