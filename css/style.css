@@ -11,10 +11,13 @@ body{
 header{
     background-color: rgb(3, 179, 126);
     padding: 40px 0;
+    position: fixed;
+    width: 100%;
 }
 
 #container{
     margin: 0 20%;
+    position: relative;
 }
 
 #upbar{
@@ -30,7 +33,7 @@ header{
     align-items: center;
 }
 
-#user, #notice, #lst{
+#user, #contactlist {
     width: 40%;
 }
 
@@ -38,9 +41,18 @@ header{
     width: 60%;
 }
 
-#chat, #lst{
+#chat, #contactlist {
     height: 600px;
+}
+
+#chat{
     background-color: antiquewhite;
+
+}
+
+#contactlist{
+    background-color: rgb(255, 255, 255);
+
 }
 
 #upbar i{
@@ -86,13 +98,37 @@ header{
     align-items: center;
 }
 
-
-#namec{
-    width: 400px;
-}
-
 #col{
     display: flex;
 }
 
+#lst{
+    height: 540px;
+    background-color: rgb(255, 255, 255);
+}
 
+#search{
+    background-color: rgb(198, 198, 198);
+    align-items: center;
+    padding: 5px 0;
+}
+
+#search input{
+    padding: 5px 0;
+    width: 60%;
+    border: 0;
+}
+
+#search i{
+    background-color: white;
+    padding: 5px 0;
+    margin-left: 5px;
+    border-right: 2px solid rgb(198, 198, 198);
+    text-align: center;
+    width: 50px;
+}
+
+#search div{
+    background-color: white;
+    margin: 0 5px;
+}
