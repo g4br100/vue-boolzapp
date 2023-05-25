@@ -27,9 +27,11 @@
                     </div>
                     <div id="contactchat">
                         <div>
-                            <div class="circleuser"></div>
                             <div>
-                                <h4>Michele</h4>
+                                <img class="circleuser" :src="contacts[active_contact].avatar" alt="User Image" >
+                            </div>
+                            <div>
+                                <h4>{{ contacts[active_contact].name }}</h4>
                                 <p>Ultimo accesso oggi alle 12:00</p>
                             </div>
                         </div>
@@ -58,14 +60,16 @@
                             </div>
                         </div>
                         <ul>
-                            <li v-for="item in contacts">
+                            <li v-for="(contact, index) in contacts"
+                            @click="switchcontact(index)"
+                            :class="index == active_contact ? 'active' : ''">
                                 <div>
                                     <div>
-                                        <img class="circleuser" :src="item.image" alt="User Image" >
+                                        <img class="circleuser" :src="contact.avatar" alt="User Image" >
                                     </div>
                                     <div>
-                                        <h4>{{item.title}}</h4>
-                                        <p>{{item.text}}</p>
+                                        <h4>{{ contact.name }}</h4>
+                                        <p>Ultimo messaggio inviato</p>
                                     </div>
                                 </div>
                                 <span>12:30</span>
@@ -74,6 +78,10 @@
                     </div>
                     <div id="chat">
                         <div id="message">
+                            <div v-for="message_object in contacts[active_contact].messages" class="cmessage">
+                                <p>{{ message_object.message }}</p>
+                            </div>
+                            
                             <div id="textadded">
                                     <div v-for="item in items" class="umessage">
                                         <p>{{item.text}}</p>

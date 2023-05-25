@@ -46,6 +46,7 @@ header{
 
 #chat{
     background-color: antiquewhite;
+    padding-top: 20px;
 }
 
 #message{
@@ -194,5 +195,13 @@ ul li:hover{
     padding: 12px 0;
 }
 
+.cmessage{
+    background-color: rgb(248, 255, 236);
+    width: 200px;
+    text-align: center;
+    margin: 10px 10px;
+    border-radius: 10px;
+    padding: 12px 0;
+}
 
 
