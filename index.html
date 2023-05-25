@@ -16,7 +16,7 @@
                <div id="upbar">
                     <div id="user">
                         <div>
-                            <div class="circleuser"></div>
+                            <img class="circleuser" src="img/4.png" alt="">
                             <h4>Sofia</h4>
                         </div>
                         <div>
@@ -74,12 +74,16 @@
                     </div>
                     <div id="chat">
                         <div id="message">
-
+                            <div id="textadded">
+                                    <div v-for="(item, indice) in items" :class="item.send" class="umessage">
+                                        <p>{{item.text}}</p>
+                                    </div>
+                            </div>
                         </div>
                         <div id="write">
                             <i class="fa-solid fa-face-smile"></i>
-                            <input type="text" placeholder="Scrivi un messaggio">
-                            <i class="fa-solid fa-microphone"></i>
+                            <input type="text" placeholder="Scrivi un messaggio" v-model="ntsk" @keyup.enter="addtsk">
+                            <i class="fa-solid fa-microphone" @click="addtsk"></i>
                         </div>
                     </div>
                 </div>

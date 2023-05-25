@@ -40,8 +40,24 @@ createApp({
                             title: 'Davide',
                             text: 'Ultimo messaggio inviato',
                         }, 
-                ]
+                ],
+                searchTerm: "",
+                ntsk:"",
+                items:[],
             }
         },
+        methods:{
+            addtsk(){
+                if (this.ntsk !== ""){
+                    const newItem ={
+                        text : this.ntsk,
+                        status : false
+                    };
+                    this.items.unshift(newItem);
+                    this.ntsk="";
+                }
+            },
+    }
+        
     
 }).mount("#container");

@@ -183,3 +183,16 @@ ul li:hover{
 .grey{
     background-color: grey;
 }
+
+.umessage{
+    background-color: rgb(227, 255, 185);
+    width: 200px;
+    text-align: center;
+    margin: 10px 0;
+    margin-left: 340px;
+    border-radius: 10px;
+    padding: 12px 0;
+}
+
+
+
