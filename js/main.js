@@ -166,26 +166,27 @@ createApp({
                     ],
                 }
             ],
-                searchTerm: "",
-                ntsk:"",
-                items:[],
             }
         },
         methods:{
-            addtsk(){
-                if (this.ntsk !== ""){
-                    const newItem ={
-                        text : this.ntsk,
-                        status : false
+            sender() {
+                let nwmessage_object = {
+                    message: this.nwmessage,
+                    status: "sent"
+                };
+                let actualmessage = this.contacts[this.active_contact].messages;
+                actualmessage.push(nwmessage_object);
+                this.nwmessage = "";    
+                setTimeout(function() {
+                    let user_messsage = {
+                        message: "ok",
+                        status: "received"
                     };
-                    this.items.unshift(newItem);
-                    this.ntsk="";
-                }
+                    actualmessage.push(user_messsage);    
+                }, 1000);
             },
             switchcontact(index) {
                 this.active_contact = index;
             }
     }
-        
-    
 }).mount("#container");

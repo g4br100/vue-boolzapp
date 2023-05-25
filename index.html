@@ -77,22 +77,18 @@
                         </ul>
                     </div>
                     <div id="chat">
-                        <div id="message">
-                            <div v-for="message_object in contacts[active_contact].messages" :class="message_object.status">
-                                <p>{{ message_object.message }}</p>
-                                <span>12:00</span>
-                            </div>
-                            <div id="textadded">
-                                    <div v-for="item in items" class="sent">
-                                        <p>{{item.text}}</p>
-                                        <span>12:00</span>
-                                    </div>
+                        <div id="box">
+                            <div id="message">
+                                <div v-for="message_object in contacts[active_contact].messages" :class="message_object.status">
+                                    <p>{{ message_object.message }}</p>
+                                    <span>12:00</span>
+                                </div>
                             </div>
                         </div>
                         <div id="write">
                             <i class="fa-solid fa-face-smile"></i>
-                            <input type="text" placeholder="Scrivi un messaggio" v-model="ntsk" @keyup.enter="addtsk">
-                            <i class="fa-solid fa-microphone" @click="addtsk"></i>
+                            <input type="text" placeholder="Scrivi un messaggio" v-model="nwmessage" @keyup.enter="sender">
+                            <i class="fa-solid fa-microphone" @click="sender"></i>
                         </div>
                     </div>
                 </div>
